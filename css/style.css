@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;677;700&display=swap');
+
+body{
+    font-family: 'Recursive', sans-serif;
+    background: #5a3838;
+    color: white;
+    line-height: 1.6;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.slide.current{
+    opacity: 1;
+}
+
+
+.slide .content{
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    opacity: 0;
+    width: 600px;
+    background: rgba(255,255,255,0.8);
+    color: black;
+    padding: 25px;
+}
+.slide.current .content{
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons{
+    position: absolute;
+    left: 80%;
+    bottom: 70px;
+}
+
+button{
+    padding: 25px 25px;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 50%;
+    color: white;
+    border: 3px solid white;
+    margin-right: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.slide:first-child{
+    background: url(../img/2.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(2){
+   background: url(../img/4.jpg) no-repeat center top/cover;         
+}
+.slide:nth-child(3){
+   background: url(../img/5.jpg) no-repeat center top/cover;         
+}
+.slide:nth-child(4){
+   background: url(../img/6.jpg) no-repeat center top/cover;         
+}
+.slide:nth-child(5){
+   background: url(../img/8.jpg) no-repeat center top/cover;         
+}
+    
+
+
+
